@@ -1,62 +1,9 @@
 package ObjetosEClasses;
 
-import java.util.Scanner;
-
-/**
- * Main
- */
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("--- INFORME OS DADOS DO SEU VEÍCULO ---");
-        System.out.println("--------------------");
-        scanner.nextLine();
-
-            //coleta de informações obrigatórias
-            System.out.println("Informe abaixo os dados obrigatórios:");
-            scanner.nextLine();
-
-                System.out.print("Número de portas: ");
-                int numPortas = scanner.nextInt();
-                scanner.nextLine();
-
-                System.out.print("Número do Chassi: ");
-                String numChassi = scanner.nextLine();
-                
-                System.out.print("Ano de fabricação: ");
-                int anoFabricacao = scanner.nextInt();
-                scanner.nextLine();
-                
-                System.out.print("Tipo do combustível: ");
-                String combustivel = scanner.nextLine();
-
-            //coleta de informações opcionais
-            System.out.println("Informe abaixo os dados opcionais:");
-            scanner.nextLine();
-
-                System.out.print("Qual a cor do veículo?: ");
-                String cor = scanner.nextLine();
-                
-                System.out.print("Qual o modelo do veículo?: ");
-                String modelo = scanner.nextLine();
-                
-                System.out.print("O veículo é automático? (sim/não): ");
-                boolean automatico = scanner.nextBoolean();
-                scanner.nextLine();
-
-                System.out.print("O veículo possui Ar Condicionado? (sim/não): ");
-                boolean arCondicionado = scanner.nextBoolean();
-                scanner.nextLine();
-    
-    }
-}
-
-
 /**
  * Carro
  */
- class Carro {
+class Carro {
     //métodos obrigatórios
     private int numPortas;
     private String numChassi;
@@ -92,4 +39,14 @@ public class Main {
         this.arCondicionado = arCondicionado;
     }
 
+    public void exibirCarro() {
+        System.out.println("Modelo " + modelo);
+        System.out.println("Cor: " + cor);
+        System.out.println("Número de portas: " + numPortas);
+        System.out.println("Número do chassi: " + numChassi);
+        System.out.println("Ano de fabricação: " + anoFabricacao);
+        System.out.println("Tipo de combustível: " + combustivel);
+        System.out.println("Automático: " + automatico);
+        System.out.println("Ar condicionado: " + arCondicionado);
+    }
 }
